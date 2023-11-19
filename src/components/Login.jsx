@@ -62,7 +62,6 @@ const Login = () => {
           <form
             onSubmit={(e) => submitForm(e)}
             method="post"
-            action=""
             className="mt-8 w-64 flex flex-col"
             name="instagram"
           >

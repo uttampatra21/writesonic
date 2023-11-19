@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -27,7 +28,7 @@ const Header = () => {
           />
         </li>
         <li className="btn none">sign in</li>
-        <li className="btn active">get started</li>
+       <NavLink to="Login"> <li className="btn active">get started</li></NavLink>
       </ul>
     </div>
   );

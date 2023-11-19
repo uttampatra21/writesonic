@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Followers from "./Followers";
 
 const Home = () => {
+  const [cover, setCover] = useState("cover");
   const [img, setImg] = useState(
     "https://writesonic.com/_next/image?url=https%3A%2F%2Fd1q5p2nadm4152.cloudfront.net%2Fpublic%2Fimages%2Fhome-page%2Fgmail.webp&w=1920&q=75"
   );
@@ -29,9 +30,12 @@ const Home = () => {
 
       <div id="vid">
         <video
+          onClick={() => setCover("cover")}
+          className="object-cover"
           controls
           loops
           autoPlay
+          poster="https://1.bp.blogspot.com/-DzNPDVZJVhk/YQLQ1UZqAxI/AAAAAAAAAGo/jrAz3Bae3_g6sz1pXpED-n5COQdbwgkcQCPcBGAYYCw/w1600/Alhumdulillah.jpg"
           src="/public/video/Untitled video - Made with Clipchamp.mp4"
         ></video>
       </div>

@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Footer from "./components/Footer";
 import Magic from "./components/Magic";
+import Testomonial from "./components/Testomonial";
+import Followers from "./components/Followers";
 
 function App() {
   return (
@@ -36,6 +38,9 @@ function App() {
             <>
               <Header />
               <Magic />
+              <br />
+              <Followers />
+              <Footer />
             </>
           }
         />

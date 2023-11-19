@@ -42,16 +42,16 @@ const Home = () => {
           alt=""
         />
         <p className="text-center text-xl">
-          At WS you get the best of best working services which will never let{" "}
-          <br />
-          you or your clients down. We always try to give best services <br />{" "}
+          At WS you get the best of best working services which will never let
+          
+          you or your clients down. We always try to give best services 
           in the market which is always working.
         </p>
       </div>
 
       <div id="" className="m-5">
         <div id="outlet">
-          <div className="flex justify-center py-20 gap-10">
+          <div className="web-container flex justify-center py-20 gap-10">
             <div
               className="btn"
               onClick={() =>

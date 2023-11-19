@@ -26,7 +26,7 @@ const Header = () => {
             alt=""
           />
         </li>
-        <li className="btn">sign in</li>
+        <li className="btn none">sign in</li>
         <li className="btn active">get started</li>
       </ul>
     </div>

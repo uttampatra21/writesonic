@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Testomonial from "./Testomonial";
 import { NavLink } from "react-router-dom";
+import Followers from "./Followers";
 
 const Home = () => {
   const [img, setImg] = useState(
@@ -43,9 +44,8 @@ const Home = () => {
         />
         <p className="text-center text-xl">
           At WS you get the best of best working services which will never let
-          
-          you or your clients down. We always try to give best services 
-          in the market which is always working.
+          you or your clients down. We always try to give best services in the
+          market which is always working.
         </p>
       </div>
 
@@ -92,6 +92,18 @@ const Home = () => {
 
       <div id="testomonial">
         <Testomonial />
+      </div>
+
+      <div id="container" className="text-center">
+        <h1>From content to success: Customer ROI stories</h1>
+        <p>
+          Discover how our customers transformed their narratives into tangible
+          returns.
+        </p>
+        <p>Get Started Free </p>
+        <div className="">
+          <Followers />
+        </div>
       </div>
     </div>
   );

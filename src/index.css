@@ -152,12 +152,28 @@
   justify-content: center;
 }
 
+.card img {
+  border-radius: 10px;
+}
+#folowers-sample {
+  padding: 20px;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 /* 
 
 ---------- RESPONSIVE
 */
 
 @media only screen and (max-width: 600px) {
+  .home{
+    padding: 10px;
+  }
   .none {
     display: none !important;
   }
@@ -196,7 +212,7 @@
     border-bottom-right-radius: 30px;
   }
   .web-container {
-    padding: 30px 0;
+    padding: 25px 0;
     gap: 20px;
   }
   .button {
@@ -216,11 +232,6 @@
     line-height: 1.1;
   }
   .ceo {
-    /* display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow: auto;
-    scroll-snap-type: inline mandatory; */
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     -webkit-box-align: center;
@@ -235,5 +246,9 @@
     -ms-scroll-snap-type: inline mandatory;
     scroll-snap-type: inline mandatory;
     overscroll-behavior-inline: contain;
+  }
+  #folowers-sample {
+    padding: 10px;
+    height: 50vh;
   }
 }

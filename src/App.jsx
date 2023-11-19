@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
+import Magic from "./components/Magic";
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
             <>
               <Header />
               <Home />
+              <Footer />
             </>
           }
         />
@@ -22,6 +25,17 @@ function App() {
           element={
             <>
               <Login />
+            </>
+          }
+        />
+
+        {/* Magic */}
+        <Route
+          path="Magic"
+          element={
+            <>
+              <Header />
+              <Magic />
             </>
           }
         />

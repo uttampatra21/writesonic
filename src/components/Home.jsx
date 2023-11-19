@@ -20,7 +20,7 @@ const Home = () => {
             Competitors by decoding their secrets and leveraging trending
             keywords <br /> to boost your organic traffic.
           </div>
-          <NavLink to="Login">
+          <NavLink to="Magic">
             {" "}
             <div className="button">get started free</div>
           </NavLink>

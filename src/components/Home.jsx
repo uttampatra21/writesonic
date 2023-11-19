@@ -27,6 +27,14 @@ const Home = () => {
         </div>
       </div>
 
+      <div id="vid">
+        <video
+          controls
+          loops
+          autoPlay
+          src="/public/video/Untitled video - Made with Clipchamp.mp4"
+        ></video>
+      </div>
       <div id="trust" className="text-center p-10">
         <span className="bg-border">TRUSTED BY 5,000,000+</span>{" "}
         <span className="opacity-60">

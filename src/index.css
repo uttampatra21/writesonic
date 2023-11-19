@@ -184,6 +184,20 @@
   height: 100vh;
 }
 
+
+#vid {
+  height: 50vh;
+  padding: 2rem 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#vid video {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* 
 ---------- RESPONSIVE
 */

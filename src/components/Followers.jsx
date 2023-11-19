@@ -3,6 +3,15 @@ import React from "react";
 const Followers = () => {
   const data = [
     {
+      img: "https://hotinsocialmedia.com/wp-content/uploads/2023/06/04.webp",
+    },
+    {
+      img: "https://cdn2.avada.io/media/resources/HUAjJ3q.jpg",
+    },
+    {
+      img: "https://hotinsocialmedia.com/wp-content/uploads/2023/06/01.webp",
+    },
+    {
       img: "https://www.guinnessworldrecords.com/Images/split-photo-of-kylie-jenners-instagram-profile-and-selena-gomez-instagram-profile_tcm25-739529.jpg",
     },
     {

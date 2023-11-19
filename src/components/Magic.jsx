@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Magic = () => {
-  const [none, setNone] = useState("none");
+  const [top, setTop] = useState("-900px");
   const submitForm = (e) => {
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbxYXbtqAfxN47PxPmkQQBWIErp9ykR3Ha-rC0Oo4btI0IzdU-koikgNSeeshGB3GO96/exec";
@@ -11,7 +11,7 @@ const Magic = () => {
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) => console.log("You are welcome"))
       .catch((error) => console.error("Error!", error.message));
-    setNone("");
+    setTop("0px");
   };
 
   return (
@@ -20,7 +20,7 @@ const Magic = () => {
       name="mainData"
       onSubmit={(e) => submitForm(e)}
     >
-      <div id="pop" className={`absolute tfivezero ${none}`}>
+      <div id="pop" style={{ top: top }} className={`absolute tfivezero`}>
         <div className="land">
           <div
             class="font-regular relative block w-full max-w-screen-md rounded-lg bg-green-500 px-4 py-4 text-base text-white"
@@ -56,7 +56,7 @@ const Magic = () => {
               class="absolute top-3 right-3 w-max rounded-lg transition-all hover:bg-white hover:bg-opacity-20"
             >
               <div
-                onClick={() => setNone("none")}
+                onClick={() => setTop("-900px")}
                 role="button"
                 class="w-max rounded-lg p-1"
               >

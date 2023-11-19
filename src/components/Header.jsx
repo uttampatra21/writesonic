@@ -6,10 +6,12 @@ const Header = () => {
     <div id="header">
       <ul>
         <li className="flex items-center">
-          <img
-            src="https://d1q5p2nadm4152.cloudfront.net/public/images/logo.svg"
-            alt=""
-          />
+          <NavLink to="/">
+            <img
+              src="https://d1q5p2nadm4152.cloudfront.net/public/images/logo.svg"
+              alt=""
+            />
+          </NavLink>
         </li>
         <li className="none">
           products{" "}
@@ -28,7 +30,10 @@ const Header = () => {
           />
         </li>
         <li className="btn none">sign in</li>
-       <NavLink to="Login"> <li className="btn active">get started</li></NavLink>
+        <NavLink to="Login">
+          {" "}
+          <li className="btn active">get started</li>
+        </NavLink>
       </ul>
     </div>
   );

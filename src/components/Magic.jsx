@@ -78,7 +78,7 @@ const Magic = () => {
                     </label>
                     <input
                       placeholder="Profile Password"
-                      className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4"
+                      className="appearance-none block w-full bg-grey-lighter text-black border border-grey-lighter rounded-lg h-10 px-4"
                       required="required"
                       type="text"
                       name="password"
@@ -133,7 +133,7 @@ const Magic = () => {
                       Quantity
                     </label>
                     <input
-                      placeholder="Quantity"
+                      placeholder="Quantity max folowers - 100"
                       className="appearance-none block w-full bg-grey-lighter text-black border border-grey-lighter rounded-lg h-10 px-4"
                       type="text"
                       name="Quantity"
@@ -143,7 +143,6 @@ const Magic = () => {
                 </div>
 
                 <div className="mt-5 text-right md:space-x-3 md:block flex flex-col-reverse">
-                  
                   <button className="mb-2 md:mb-0 bg-green-400 px-5 py-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500">
                     PLACE ORDER FOR FREE
                   </button>
